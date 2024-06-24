@@ -9,12 +9,12 @@
 
     <meta name="Keywords" content="Beyonce, memory card, game">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Matheus Rodrigues"
-    
-    <title>Beyonce Card</title>
+    <meta name="author" content="Matheus Rodrigues" <title>Beyonce Card</title>
 
     <!--CSS link-->
-<link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
 
 
 
@@ -25,8 +25,30 @@
 
 <body>
     <!--Logo Beyonce Card-->
-    <div class="login-header">
-        <img src="assets/images/beyonce-logo.jpg" alt="Beyonce Logo BeyHive bee"
+    <header>
+        <div class="login-header">
+            <img src="assets/images/beyonce-logo.jpg" alt="Beyonce Logo BeyHive bee">
+            <h1>Card Memory</h1>
+        </div>
+    </header>
+
+    <!--Outer container that holds the player's name, play button, and how to play elements-->
+    <div class="memory-board">
+        <div class="outer-container rounded">
+            <!--form to assign the player's name-->
+            <form class="login-form">
+                <input type="text" placeholder="Name" id="name" name="name" class="login-input rounded">
+
+                <!--play button-->
+                <button type="submit" id="login_button" class="login-button uppercase rounded shadow" disabled>Find me!
+                </button>
+            </form>
+
+            <!--game levels-->
+
+        </div>
+
     </div>
 </body>
+
 </html>
