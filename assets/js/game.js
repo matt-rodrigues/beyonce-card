@@ -152,3 +152,52 @@ function revealCard(event) {
         }
     }
 }
+
+console.log("^clicked, ====>");
+
+//add click event
+function addCardClickListeners() {
+
+    console.log("^clicked, ====>");
+    const memoryCards = document.querySelectorAll('.memory-card');
+    memoryCards.forEach(card => {
+        card.addEventListener('click', revealCard);
+    });
+}
+
+//check if the game is over
+function isGameOver() {
+
+    const memoryCards = document.querySelectorAll('.memory-card');
+    for (const card of memoryCards) {
+        if (!card.querySelector('.front').classList.contains('disabled-card')) {
+            //if any card is not disabled, the game is not over    
+            return false
+        }
+    }
+
+    //if all card are disabled, the game is over
+    isGameEnded = true;
+    stopTimer();
+
+    //results modal
+    const resultsModal = document.getElementById('container-results');
+    const modalPlayerName = document.getElementById('modal-player-name');
+    const modalMovements = document.getElementById('modal-movements');
+    const modalTime = document.getElementById('modal-time');
+
+    modalPlayerName.textContent = playerName;
+    modalMovements.textContent = moves;
+    modalTime.textContent = finalTime;
+
+    resultsModal.style.display = 'block';
+
+    return true;
+}
+
+//reset time to 00:00
+function resetTimer() {
+    stopTimer();
+    timer.innerHTML = "00:00";
+}
+
