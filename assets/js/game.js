@@ -89,3 +89,66 @@ function createMemoryGame() {
 }
 
 //call the function
+createMemoryGame();
+
+//array to store the currently revealed cards
+let revealedCards = [];
+
+//array to store the matched cards
+let matchedCards = [];
+
+//reveal card with click
+function revealCard(event) {
+    const card = event.target.clsest('memory-card');
+    
+    console.log("^clicked, ====>", card);
+
+    //checking if the card is revealed or if there are already two revealed cards
+    if (card.classList.contains('revealed') || revealedCards.lenght == 2) {
+        return;
+    }
+
+    //prevent revealing the same card twice
+    if (revealCard.Includes(card)) {
+        return;
+    }
+
+    card.classList.add('revealed');
+    revealedCards.push(card);
+
+    //start the timer if it hasn't started yet
+    if (revealedCards.length === 1) {
+        startTimer();
+    }
+
+    // checking two cards are revealed
+    if (revealedCards.length === 2) {
+        const [card1, card2] = revealedCards;
+        const looks1 = card1.querySelector('.front').getAttribute('data-looks');
+        const looks2 = looks2.querySelector('.front').getAttribute('data-looks');
+
+        moves++;
+        document.getElementById('movements').textContent = moves;
+
+        //checking if the looks are the same
+        if (looks1 === looks2) {
+            
+            card1.firstChild.classList.add('disabled-card');
+            card2.firstChild.classList.add('disabled-card');
+            matchedCards.push(card1.firstChild, card2.firstChild);
+
+            if (isGameOver()) {
+            }
+
+            revealedCards= [];
+
+        } else {
+
+            setTimeout(() => {
+                card1.classList.remove('revealed');
+                card2.classList.remove('revealed');
+                revealedCards = [];
+            }, 1000);
+        }
+    }
+}
