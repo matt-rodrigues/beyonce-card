@@ -286,3 +286,10 @@ function timerCycle() {
         timerTimeout = setTimeout("timerCycle()", 1000);
     }
 }
+
+//quit button
+const quitButton = document.getElementById('quit-button');
+
+quitButton.addEventListener('click', () => {
+    window.locarion.href = 'index.html'
+})
