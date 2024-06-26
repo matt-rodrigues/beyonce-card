@@ -201,3 +201,30 @@ function resetTimer() {
     timer.innerHTML = "00:00";
 }
 
+//add player's name introduced on the homepage
+const spanPlayer = document.querySelector('.player');
+
+window.onload = () => {
+    spanPlayer.innerHTML = playerName;
+
+    moves = 0; 
+    document.getElementById('moviments').textContent = moves;
+
+    //call this function after creating memory game
+    addCardClickListeners();
+
+    //play again results modal
+    const resultsModal = document.getElementById('container_results');
+    const closeResults = document.getElementById('close-results');
+    const playAgain = document.getElementById('play-again');
+
+    closeResults.addEventListener('click', function() {
+        resultsModal.style.display = 'none';
+    });
+
+    playAgain.addEventListener('click', () => {
+
+        window.location.href = 'index.html';
+    });
+};
+
