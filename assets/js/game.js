@@ -228,3 +228,61 @@ window.onload = () => {
     });
 };
 
+//implement a timer in the game
+//created using the external source - https://dev.to/gspteck/create-a-stopwatch-in-javascript-2mak
+const timer = document.getElementById('stopwatch');
+
+var min = 0;
+var sec = 0;
+var finalSec = 0;
+var finalMin = 0;
+var stoptime = true;
+
+function startTimer() {
+    if (stoptime == true) {
+        stoptime = false;
+        timerCycle();
+    }
+}
+
+//stop the timer and update the final time
+function stopTimer() {
+    if (stoptime == false) {
+        stoptime = true;
+        clearTimeout(timerTimeout);
+
+         // Store the current time in finalSec and finalMin
+         finalSec = sec;
+         finalMin = min;
+
+        //store the final time to "mm:ss" and store it in finalTime
+        const formattedMin = String(finalMin).padStart(2, '0');
+        const formattedSec = String(finalSec).padStart(2, '0');
+        finalTime = formattedMIn + ":" + formattedSec;
+
+        //update the timer display with the final time
+        timer.innerHTML = finalTime;
+    }
+}
+
+function timerCycle() {
+    if (stoptime == false) {
+        sec = parseInt(sec);
+        min = parseInt(min);
+        sec = sec + 1;
+
+        if (sec == 60) {
+            min = min + 1;
+            sec = 0;
+        }
+
+        if (sec < 10 || sec == 0) {
+            sec = "0" + sec;
+        }
+        if (min < 10 || min == 0) {
+            min = "0" + min;
+        }
+        timer.innerHTML = min + ":" + sec;
+        timerTimeout = setTimeout("timerCycle()", 1000);
+    }
+}
