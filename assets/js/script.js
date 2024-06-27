@@ -28,3 +28,18 @@ const closeScreen = document.getElementById('close');
 const btnEasy = document.getElementById('btn_easy');
 const btnMedium = document.getElementById('btn_medium');
 const btnHard = document.getElementById('btn_hard');
+
+login_button.addEventListener('click', () => {
+    levelContainer.classList.add('show');
+});
+
+closeScreen.addEventListener('click', () => {
+    levelContainer.classList.remove('show');
+});
+
+function redirectToGamePage(columns, rows) {
+    const url = `game.html?columns=${columns}&rows=${rows}`;
+    window.location.href = url;
+}
+
+//
