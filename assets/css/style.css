@@ -83,7 +83,7 @@ header {
     width: 100%;
     height: 100vh;
     min-height: calc(100vh - var(--header-height));
-    background-image: url(../images/backgroundpg.jpg) /*COLOCAR IMAGEM AQUI!!! PEGAR COM AI*/;
+    background-image: url(../images/backgroundpg.jpg);
     background-position: center;
     background-size: cover;
     padding: 20px 0 26px;
@@ -135,7 +135,7 @@ header {
     width: 100%;
     max-width: 400px;
     height: 150px;
-    background-image: /**ADD IMAGEM**/;
+    background-image: url(../images/img-levels.jpeg);
     background-size: cover;
     background-position: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -272,4 +272,54 @@ header {
 
 /** game page **/
 /** game container **/
-.game-conteiner 
+.game-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: var(--darkblue); /*VER COR*/
+    width: 100%;
+    max-width: 700px;
+    padding: 1rem;
+    margin-bottom: 20px;
+}
+
+.player-info,
+.movements-info,
+.timer-info {
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+/* addtional style for player info*/
+.player-info {
+    flex: 2;
+}
+
+/* addtional style for moviment and timer info*/
+.movements-info,
+.timer-info {
+    flex: 1;
+}
+
+/* movements and hourglass - fontawesome icon */
+.movements-info i,
+.timer-info i {
+    color: var(--firebrick);
+}
+
+/* memory grid*/
+.memory-game {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    gap: 10px;
+}
