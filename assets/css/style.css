@@ -443,3 +443,187 @@ header {
 .margin {
     margin: auto;
 }
+
+/* media queries*/
+
+/* Medium devices (landscape tablets, 850px wide and down) */
+@media screen and (max-width: 850px) {
+    .outer-container {
+        width: 90%;
+    }
+}
+
+/* Medium devices (tablets, 768px wide and down) */
+@media screen and (max-width: 768px) {
+    #how-to-play {
+        font-size: 13pt;
+    }
+
+    .game-container,
+    .memory-game {
+        width: 90%;
+        padding: 0.7rem;
+    }
+
+    .memory-game {
+        gap: 5px;
+    }
+
+    #quit-button {
+        padding: 0.7rem;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .modal-body {
+        margin: 40px 0 0;
+    }
+
+    .modal-body p {
+        font-size: 12pt;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px wide and down) */
+@media screen and (max-width: 600px) {
+    .login-header img {
+        width: 160px;
+    }
+
+    .login-header h1 {
+        font-size: 2em;
+    }
+
+    #how-to-play {
+        font-size: 12pt;
+    }
+
+    .player-info,
+    .movements-info,
+    .timer-info {
+        font-size: 14pt;
+    }
+
+    .game-container,
+    .memory-game,
+    #quit-button {
+        padding: 0.5rem;
+    }
+
+    .memory-game {
+        gap: 2px;
+    }
+
+    .modal-body h2 {
+        font-size: 16pt;
+    }
+}
+
+/* Extra small devices (phones, 520px wide and down) */
+@media screen and (max-width: 520px) {
+    .login-header img {
+        width: 140px;
+        margin: 0;
+    }
+
+    .login-header h1 {
+        font-size: 1.5em;
+        margin: 0 10px;
+    }
+
+    .login-button {
+        font-size: 20pt;
+    }
+
+    #how-to-play {
+        font-size: 11pt;
+    }
+
+    .player-info,
+    .movements-info,
+    .timer-info {
+        font-size: 12pt;
+    }
+
+    .modal-body h2 {
+        font-size: 14pt;
+    }
+}
+
+/* Extra small devices (phones, 400px wide and down) */
+@media screen and (max-width: 400px) {
+    .login-header img {
+        width: 130px;
+    }
+
+    .login-header h1 {
+        font-size: 1.2em;
+    }
+
+    .login-button {
+        font-size: 19pt;
+    }
+
+    .modal-body h2 {
+        font-size: 16pt;
+    }
+
+    .btn-level {
+        font-size: 18pt;
+    }
+
+    .modal-body img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .modal-content {
+        padding-bottom: 10px;
+    }
+
+    #how-to-play {
+        font-size: 10pt;
+    }
+}
+
+/* Extra small devices (phones, 350px wide and down) */
+@media screen and (max-width: 350px) {
+    .login-header img {
+        width: 120px;
+    }
+
+    .login-header h1 {
+        font-size: 1em;
+    }
+
+    .login-button {
+        font-size: 18pt;
+    }
+
+    #how-to-play {
+        font-size: 8pt;
+    }
+
+    .modal-body h2 {
+        font-size: 14pt;
+    }
+
+    .btn-level {
+        font-size: 16pt;
+    }
+
+    .player-info,
+    .movements-info,
+    .timer-info {
+        font-size: 10pt;
+    }
+}
+
+/* Media query for memory-board height for screen sizes smaller than 600px */
+@media (max-height: 600px) {
+    .memory-board {
+        height: auto;
+    }
+}
