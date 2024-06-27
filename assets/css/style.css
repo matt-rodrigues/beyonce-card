@@ -419,3 +419,27 @@ header {
     color: var(--darkblue);
 }
 
+/* 404 page*/
+.error {
+    text-align: center;
+    line-height: 2;
+    font-size: 24pt;
+    margin-top: 100px;
+}
+
+.error h2 {
+    color: var(--firebrick);
+}
+
+.error p {
+    color: var(--darkblue);
+    padding: 30px;
+}
+
+.error a {
+    text-decoration: none;
+}
+
+.margin {
+    margin: auto;
+}
