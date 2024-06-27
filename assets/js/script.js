@@ -65,7 +65,7 @@ btnHard.addEventListener('click', () => {
 
 //add img to buttons
 function addImagesToButtons(button, n) {
-    for (let i = 0; i < n, i++) {
+    for (let i = 0; i < n; i++) {
         const img = document.createElement('img');
         img.src = 'assets/images/img-button.jpeg';
         img.alt = 'bee image';
@@ -73,6 +73,6 @@ function addImagesToButtons(button, n) {
     }
 }
 
-addImagesToButton(btnEasy, 1);
-addImagesToButton(btnMedium, 2);
-addImagesToButton(btnHard, 3);
+addImagesToButtons(btnEasy, 1);
+addImagesToButtons(btnMedium, 2);
+addImagesToButtons(btnHard, 3);
