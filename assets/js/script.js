@@ -63,3 +63,16 @@ btnHard.addEventListener('click', () => {
     redirectToGamePage(columns, rows);
 })
 
+//add img to buttons
+function addImagesToButtons(button, n) {
+    for (let i = 0; i < n, i++) {
+        const img = document.createElement('img');
+        img.src = 'assets/images/img-button.jpeg';
+        img.alt = 'bee image';
+        button.appendChild(img);
+    }
+}
+
+addImagesToButton(btnEasy, 1);
+addImagesToButton(btnMedium, 2);
+addImagesToButton(btnHard, 3);
