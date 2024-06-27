@@ -382,8 +382,40 @@ header {
 }
 
 #quit-button:hover {
-background-color: var(--darkblue);
-border: 2px solid var(--aliceblue);
-color: white;
-cursor: pointer;
+    background-color: var(--darkblue);
+    border: 2px solid var(--aliceblue);
+    color: white;
+    cursor: pointer;
 }
+
+/* results modal*/
+.container-results {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    width: 80%;
+    margin: 20% auto;
+}
+
+.modal-body p {
+    font-size: 14pt;
+    color: var(--firebrick);
+    padding-bottom: 20px;
+    line-height: 1.5;
+}
+
+#modal-movements,
+#modal-time {
+    color: var(--darkblue);
+}
+
