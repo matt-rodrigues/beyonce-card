@@ -42,4 +42,24 @@ function redirectToGamePage(columns, rows) {
     window.location.href = url;
 }
 
-//
+//easy level
+btnEasy.addEventListener('click', () => {
+    redirectToGamePage(4, 2);
+});
+
+//medium level
+btnMedium.addEventListener('click', () => {
+    const isSmallDevice = window.matchMedia("(max-width: 600px)").matches; 
+    const columns = isSmallDevice ? 4 : 6;
+    const rows = isSmallDevice ? 4 : 3;
+    redirectToGamePage(columns, rows);
+});
+
+//hard level
+btnHard.addEventListener('click', () => {
+    const isSmallDevice = window.matchMedia("(max-width: 600px)").matches;
+    const columns = isSmallDevice ? 5 : 8;
+    const rows = isSmallDevice ? 6 : 4;
+    redirectToGamePage(columns, rows);
+})
+
