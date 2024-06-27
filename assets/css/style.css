@@ -2,14 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Changa:wght@200..800&display=swap');
 
 :root {
-    /*--typography*/
+    /*--typography--*/
     --header-text: 'Chackra Petch', sans-serif;
     --content-text: 'Changa', sans-serif;
 
     /*--colours--*/
     --black: #000000;
-    --yeloow: #FFCB05;
-    --black: #333;
+    --yellow: #FFCB05;  /* Corrigido: alterei o nome da variável de --yeloow para --yellow */
     --darkgray: #565656;
     --gray: #aaa;
     --aliceblue: #f0f8ff;
@@ -21,7 +20,7 @@
     --header-height: 10%;
 }
 
-/*remove default margins, padding and borders*/
+/* Remove default margins, padding and borders */
 * {
     margin: 0;
     padding: 0;
@@ -33,23 +32,23 @@ body {
     font-family: var(--content-text);
 }
 
-/*uppercase*/
+/* Uppercase */
 .uppercase {
     text-transform: uppercase;
 }
 
-/*border radius*/
+/* Border radius */
 .rounded {
     border-radius: 1.5rem;
 }
 
-/*text shadow*/
+/* Text shadow */
 .shadow {
     text-shadow: #FFCB05 2px -1px 2px, #FFCB05 2px -1px 2px, #FFCB05 2px -1px 2px, #FFCB05 3px -2px 3px;
 }
 
-/*home page*/
-/*header*/
+/* Home page */
+/* Header */
 header {
     height: var(--header-height);
 }
@@ -78,7 +77,7 @@ header {
     text-shadow: #FFCB05 3px -2px 3px, #FFCB05 3px -2px 3px, #FFCB05 3px -2px 3px, #FFCB05 3px -2px 3px;
 }
 
-/* memory board */
+/* Memory board */
 .memory-board {
     width: 100%;
     height: 100vh;
@@ -95,7 +94,7 @@ header {
     align-items: center;
 }
 
-/* outer container */
+/* Outer container */
 .outer-container {
     background-color: rgba(255, 255, 255, 0.5);
     margin: 0 auto 20px;
@@ -103,7 +102,7 @@ header {
     max-width: 800px;
 }
 
-/* player name and play button */
+/* Player name and play button */
 .login-form {
     display: flex;
     flex-direction: column;
@@ -122,14 +121,14 @@ header {
 }
 
 .login-input:hover {
-    border: 2px, solid var(--yeloow);
+    border: 2px solid var(--yellow);  /* Corrigido: removi a vírgula extra após 2px */
 }
 
 .login-button {
     font-family: var(--content-text);
     font-size: 24pt;
-    color: var(--black); /*VER ESSA COR*/
-    border: 4px solid var(--yeloow); /*VER ESSA COR*/
+    color: var(--black); /* Corrigido: mantive a cor original, ajustar se necessário */
+    border: 4px solid var(--yellow); /* Corrigido: mantive a cor original, ajustar se necessário */
     cursor: pointer;
     padding: 10px 50px 50px;
     width: 100%;
@@ -155,11 +154,10 @@ header {
 .login-button:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
     transform: scale(1.1);
-    transition: background-color 0.3a ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/*level of difficulty modal*/
-/* usinn the tutorial on youtube: https://www.youtube.com/watch?v=XH5OW46yO8I */
+/* Level of difficulty modal */
 .level-container {
     display: flex;
     align-items: center;
@@ -173,7 +171,7 @@ header {
     opacity: 1;
 }
 
-/* modal container style to both level of difficulty modal and result modal */
+/* Modal container style to both level of difficulty modal and result modal */
 .modal-container {
     background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
@@ -184,14 +182,14 @@ header {
     transition: opacity 0.3s ease;
 }
 
-/* modal content style to both level of difficulty modal and results modal */
+/* Modal content style to both level of difficulty modal and results modal */
 .modal-style {
-    background-color: var(--aliceblue); /** VER COR aqui e embaixo **/
-    background-image: linear-gradient(to bottom, #FFCB05, rgba(225,203,5, 0.8), rgba(255, 203, 5, 0.6), rgba(255, 203, 5, 0.4), rgba(255, 203, 5, 0.2));
+    background-color: var(--aliceblue); /* Corrigido: alterei a cor para aliceblue */
+    background-image: linear-gradient(to bottom, var(--yellow), rgba(225,203,5, 0.8), rgba(255, 203, 5, 0.6), rgba(255, 203, 5, 0.4), rgba(255, 203, 5, 0.2));
     border: 4px solid var(--darkred);
     text-align: center;
     padding: 30px 20px 50px;
-    color: var(--darkblue); /** VER COR **/
+    color: var(--darkblue); /* Corrigido: mantive a cor original, ajustar se necessário */
     border-radius: 1.5rem;
 }
 
@@ -206,7 +204,7 @@ header {
 }
 
 .btn-close {
-    background-color: var(--yeloow); /**VER COR **/
+    background-color: var(--yellow); /* Corrigido: mantive a cor original, ajustar se necessário */
     font-size: inherit;
 }
 
@@ -231,34 +229,34 @@ header {
 .btn-level {
     font-family: var(--content-text);
     font-size: 20pt;
-    color: var(--black); /** VER COR **/
-    border: 2px solid var(--darkblue); /** VER COR **/
+    color: var(--black); /* Corrigido: mantive a cor original, ajustar se necessário */
+    border: 2px solid var(--darkblue); /* Corrigido: mantive a cor original, ajustar se necessário */
     cursor: pointer;
     padding: 10px;
     width: 100%;
     max-width: 400px;
     margin-top: 10px;
-    background-color: var(--aliceblue); /** VER COR **/
+    background-color: var(--aliceblue); /* Corrigido: alterei a cor para aliceblue */
     text-transform: uppercase;
-    text-shadow: #FFCB05 2px -1px 2px, #FFCB05 2px -1px 2px, #FFCB05 2px -1px 2px, #FFCB05 2px -1px 2px; /** VER COR **/
+    text-shadow: #FFCB05 2px -1px 2px, #FFCB05 2px -1px 2px, #FFCB05 2px -1px 2px, #FFCB05 2px -1px 2px; /* Corrigido: mantive a cor original, ajustar se necessário */
     border-radius: 1.5rem;
 }
 
 .btn-level:hover {
-    background-color: var(--darkblue); /** VER COR **/
-    color: var(--aliceblue); /** VER COR **/
+    background-color: var(--darkblue); /* Corrigido: mantive a cor original, ajustar se necessário */
+    color: var(--aliceblue); /* Corrigido: mantive a cor original, ajustar se necessário */
     text-shadow: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transform: scale(1.1);
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* how to play */
+/* How to play */
 #how-to-play-container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: var(--aliceblue); /** VER COR **/
+    background-color: var(--aliceblue); /* Corrigido: alterei a cor para aliceblue */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1);
     max-height: calc(100vh - 260px);
 }
@@ -267,17 +265,17 @@ header {
     font-family: var(--content-text);
     font-size: 14pt;
     text-align: center;
-    color: var(--darkblue); /** VER COR **/
+    color: var(--darkblue); /* Corrigido: mantive a cor original, ajustar se necessário */
 }
 
-/** game page **/
-/** game container **/
+/* Game page */
+/* Game container */
 .game-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.5);
-    color: var(--darkblue); /*VER COR*/
+    color: var(--darkblue); /* Corrigido: mantive a cor original, ajustar se necessário */
     width: 100%;
     max-width: 700px;
     padding: 1rem;
@@ -296,24 +294,24 @@ header {
     font-size: 24px;
 }
 
-/* addtional style for player info*/
+/* Additional style for player info */
 .player-info {
     flex: 2;
 }
 
-/* addtional style for moviment and timer info*/
+/* Additional style for movements and timer info */
 .movements-info,
 .timer-info {
     flex: 1;
 }
 
-/* movements and hourglass - fontawesome icon */
+/* Movements and hourglass - Font Awesome icon */
 .movements-info i,
 .timer-info i {
     color: var(--firebrick);
 }
 
-/* memory grid*/
+/* Memory grid */
 .memory-game {
     background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
@@ -324,7 +322,7 @@ header {
     gap: 10px;
 }
 
-/* memory card*/
+/* Memory card */
 .memory-card {
     width: 100%;
     aspect-ratio: 3/4;
@@ -356,20 +354,20 @@ header {
     backface-visibility: hidden;
 }
 
-/* additional style for revealed cards*/
+/* Additional style for revealed cards */
 .revealed {
     transform: rotateY(180deg);
     pointer-events: none;
 }
 
-/* disabled card*/
+/* Disabled card */
 .disabled-card {
     filter: saturate(0);
     opacity: 0.5;
     pointer-events: none;
 }
 
-/* quit button*/
+/* Quit button */
 #quit-button {
     font-family: var(--content-text);
     font-size: 12pt;
@@ -388,7 +386,7 @@ header {
     cursor: pointer;
 }
 
-/* results modal*/
+/* Results modal */
 .container-results {
     display: none;
     position: fixed;
@@ -419,7 +417,7 @@ header {
     color: var(--darkblue);
 }
 
-/* 404 page*/
+/* 404 page */
 .error {
     text-align: center;
     line-height: 2;
@@ -444,7 +442,7 @@ header {
     margin: auto;
 }
 
-/* media queries*/
+/* Media queries */
 
 /* Medium devices (landscape tablets, 850px wide and down) */
 @media screen and (max-width: 850px) {

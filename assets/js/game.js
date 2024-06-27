@@ -7,34 +7,34 @@ let isGameEnded = false;
 //momory card
 //array of characters
 const looks = [
-    'bey-1';
-    'bey-2';
-    'bey-3';
-    'bey-4';
-    'bey-5';
-    'bey-6';
-    'bey-7';
-    'bey-8';
-    'bey-9';
-    'bey-10';
-    'bey-11';
-    'bey-12';
-    'bey-13';
-    'bey-14';
-    'bey-15';
-    'bey-16';
+    'bey-1',
+    'bey-2',
+    'bey-3',
+    'bey-4',
+    'bey-5',
+    'bey-6',
+    'bey-7',
+    'bey-8',
+    'bey-9',
+    'bey-10',
+    'bey-11',
+    'bey-12',
+    'bey-13',
+    'bey-14',
+    'bey-15',
+    'bey-16',
 ];
 
 //creating card
-function createMemoryCard(character, index) {
-    const card = document.getElementById('div');
+function createMemoryCard(looks, index) {
+    const card = document.createElement('div'); // Criar um novo elemento div
     card.classList.add('memory-card');
     card.setAttribute('data-card-index', index);
 
-    const fontFace = document.createElement('div');
+    const frontFace = document.createElement('div'); // Corrigido para frontFace
     frontFace.classList.add('face', 'front');
     frontFace.style.backgroundImage = `url(assets/images/${looks}.jpg)`;
-    frontFace.setAttribute('data-character', character); //VER SE NAO PODE MUDAR PARA LOOK!
+    frontFace.setAttribute('data-looks', looks); // Mantido como looks
     card.appendChild(frontFace);
 
     const backFace = document.createElement('div');
@@ -74,8 +74,8 @@ function createMemoryGame() {
 
     //creating array with specified number of characters for the memory game
     const selectedLooks = looks.slice(0, totalCards / 2);
-    const duplicateLooks = duplicateLooks(selectedLooks);
-    const shuffledLooks = shuffleArray(duplicateLooks);
+    const duplicatedLooks = duplicateLooks(selectedLooks);
+    const shuffledLooks = shuffleArray(duplicatedLooks);
 
     //creating memory cards based in the selected looks
     shuffledLooks.forEach((looks, index) => {
@@ -99,17 +99,17 @@ let matchedCards = [];
 
 //reveal card with click
 function revealCard(event) {
-    const card = event.target.clsest('memory-card');
+    const card = event.target.closest('.memory-card');
     
     console.log("^clicked, ====>", card);
 
     //checking if the card is revealed or if there are already two revealed cards
-    if (card.classList.contains('revealed') || revealedCards.lenght == 2) {
+    if (card.classList.contains('revealed') || revealedCards.length == 2) {
         return;
     }
 
     //prevent revealing the same card twice
-    if (revealCard.Includes(card)) {
+    if (revealedCards.includes(card)) {
         return;
     }
 
@@ -157,8 +157,6 @@ console.log("^clicked, ====>");
 
 //add click event
 function addCardClickListeners() {
-
-    console.log("^clicked, ====>");
     const memoryCards = document.querySelectorAll('.memory-card');
     memoryCards.forEach(card => {
         card.addEventListener('click', revealCard);
@@ -258,7 +256,7 @@ function stopTimer() {
         //store the final time to "mm:ss" and store it in finalTime
         const formattedMin = String(finalMin).padStart(2, '0');
         const formattedSec = String(finalSec).padStart(2, '0');
-        finalTime = formattedMIn + ":" + formattedSec;
+        finalTime = formattedMin + ":" + formattedSec;
 
         //update the timer display with the final time
         timer.innerHTML = finalTime;
@@ -290,6 +288,6 @@ function timerCycle() {
 //quit button
 const quitButton = document.getElementById('quit-button');
 
-quitButton.addEventListener('click', () => {
-    window.locarion.href = 'index.html'
-})
+quitButton?.addEventListener('click', () => {
+    window.location.href = 'index.html';
+});
