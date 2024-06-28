@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Meta data-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Beyonce card is a memory card game to test your memory skills">
+
+    <meta name="Keywords" content="Beyonce, memory card, game">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Matheus Rodrigues">
+
+    <!--CSS link-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+
+
+
+
+    <!--page title-->
+    <title>Beyonce Card</title>
+</head>
+
+<body>
+    <!--Logo Beyonce Card-->
+    <header>
+        <div class="login-header">
+            <img src="assets/images/img-logo.jpeg" alt="Beyonce Logo BeyHive bee">
+            <h1>Card Memory</h1>
+        </div>
+    </header>
+
+    <!--memory board that holds the players details and the memory game-->
+    <div class="memory-board flex">
+        <!--game container that hold the players name, moviment count and timer-->
+        <div class="game-container rounded">
+            <!--player name-->
+            <div class="player-info rounded">
+                <span class="player"></span>
+            </div>
+            <!--players moviment count-->
+            <div class="moviment-info rounded">
+                <i class="fa-solid fa-gamepad"></i><span id="movements">0</span>
+            </div>
+            <!--timer-->
+            <div class="timer-info rounded">
+                <i class="fa-regular fa-hourglass-half"></i><span id="stopwatch">00:00</span>
+            </div>
+        </div>
+
+        <!--memory game-->
+        <!--outer container that holds the beyonce looks memory game-->
+        <div class="memory-game rounded">
+            <!--memory card created in java-->
+        </div>
+
+        <!--quit button-->
+        <button id="quit-button" class="uppercase rounded">Quit</button>
+
+        <!--results modal-->
+        <div class="container-results modal-container" id="container_results">
+            <div class="modal-content modal-style">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" id="close-results"><i
+                            class="fa-solid fa-circle-xmark fa-2xl" style="color: #64201c;"></i></button>
+                </div>
+                <div class="modal-body">
+                    <h2>Very Great <span id="modal-player-name"></span>! <br>You have the perfect eyes!</h2>
+                    <p>Your number of moves was <span id="modal-movements" class="rounded"></span> and your time was
+                        <span id="modal-time" class="rounded"></span>!!
+                    </p>
+                    <button class="login-button rounded" id="play-again">Look at all again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--java-->
+    <script src="assets/js/game.js"></script>
+    <!--font awesome-->
+    <script src="https://kit.fontawesome.com/d0b182acbf.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
