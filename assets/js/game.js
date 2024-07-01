@@ -34,7 +34,7 @@ function createMemoryCard(looks, index) {
     const frontFace = document.createElement('div'); // Corrigido para frontFace
     frontFace.classList.add('face', 'front');
     frontFace.style.backgroundImage = `url(assets/images/${looks}.jpg)`;
-    frontFace.setAttribute('data-looks', looks); // Mantido como looks
+    frontFace.setAttribute('data-looks', looks); 
     card.appendChild(frontFace);
 
     const backFace = document.createElement('div');
@@ -125,7 +125,7 @@ function revealCard(event) {
     if (revealedCards.length === 2) {
         const [card1, card2] = revealedCards;
         const looks1 = card1.querySelector('.front').getAttribute('data-looks');
-        const looks2 = looks2.querySelector('.front').getAttribute('data-looks');
+        const looks2 = card2.querySelector('.front').getAttribute('data-looks');
 
         moves++;
         document.getElementById('movements').textContent = moves;
@@ -165,7 +165,6 @@ function addCardClickListeners() {
 
 //check if the game is over
 function isGameOver() {
-
     const memoryCards = document.querySelectorAll('.memory-card');
     for (const card of memoryCards) {
         if (!card.querySelector('.front').classList.contains('disabled-card')) {
@@ -206,7 +205,7 @@ window.onload = () => {
     spanPlayer.innerHTML = playerName;
 
     moves = 0; 
-    document.getElementById('moviments').textContent = moves;
+    document.getElementById('movements').textContent = moves;
 
     //call this function after creating memory game
     addCardClickListeners();
