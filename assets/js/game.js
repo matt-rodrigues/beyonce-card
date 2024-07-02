@@ -27,11 +27,11 @@ const looks = [
 
 //creating card
 function createMemoryCard(looks, index) {
-    const card = document.createElement('div'); // Criar um novo elemento div
+    const card = document.createElement('div'); 
     card.classList.add('memory-card');
     card.setAttribute('data-card-index', index);
 
-    const frontFace = document.createElement('div'); // Corrigido para frontFace
+    const frontFace = document.createElement('div'); 
     frontFace.classList.add('face', 'front');
     frontFace.style.backgroundImage = `url(assets/images/${looks}.jpg)`;
     frontFace.setAttribute('data-looks', looks); 

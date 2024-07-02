@@ -3,12 +3,12 @@
 
 :root {
     /*--typography--*/
-    --header-text: 'Chackra Petch', sans-serif;
+    --header-text: 'Chakra Petch', sans-serif;
     --content-text: 'Changa', sans-serif;
 
     /*--colours--*/
     --black: #000000;
-    --yellow: #FFCB05;  /* Corrigido: alterei o nome da variável de --yeloow para --yellow */
+    --yellow: #FFCB05;  
     --darkgray: #565656;
     --gray: #aaa;
     --aliceblue: #f0f8ff;
@@ -121,14 +121,14 @@ header {
 }
 
 .login-input:hover {
-    border: 2px solid var(--yellow);  /* Corrigido: removi a vírgula extra após 2px */
+    border: 2px solid var(--yellow);  
 }
 
 .login-button {
     font-family: var(--content-text);
     font-size: 24pt;
-    color: var(--black); /* Corrigido: mantive a cor original, ajustar se necessário */
-    border: 4px solid var(--yellow); /* Corrigido: mantive a cor original, ajustar se necessário */
+    color: var(--black); 
+    border: 4px solid var(--yellow); 
     cursor: pointer;
     padding: 10px 50px 50px;
     width: 100%;
@@ -184,12 +184,12 @@ header {
 
 /* Modal content style to both level of difficulty modal and results modal */
 .modal-style {
-    background-color: var(--aliceblue); /* Corrigido: alterei a cor para aliceblue */
+    background-color: var(--aliceblue); 
     background-image: linear-gradient(to bottom, var(--yellow), rgba(225,203,5, 0.8), rgba(255, 203, 5, 0.6), rgba(255, 203, 5, 0.4), rgba(255, 203, 5, 0.2));
     border: 4px solid var(--darkred);
     text-align: center;
     padding: 30px 20px 50px;
-    color: var(--darkblue); /* Corrigido: mantive a cor original, ajustar se necessário */
+    color: var(--darkblue); 
     border-radius: 1.5rem;
 }
 
@@ -204,7 +204,7 @@ header {
 }
 
 .btn-close {
-    background-color: var(--yellow); /* Corrigido: mantive a cor original, ajustar se necessário */
+    background-color: var(--yellow); 
     font-size: inherit;
 }
 
@@ -229,22 +229,22 @@ header {
 .btn-level {
     font-family: var(--content-text);
     font-size: 20pt;
-    color: var(--black); /* Corrigido: mantive a cor original, ajustar se necessário */
-    border: 2px solid var(--darkblue); /* Corrigido: mantive a cor original, ajustar se necessário */
+    color: var(--black); 
+    border: 2px solid var(--darkblue); 
     cursor: pointer;
     padding: 10px;
     width: 100%;
     max-width: 400px;
     margin-top: 10px;
-    background-color: var(--aliceblue); /* Corrigido: alterei a cor para aliceblue */
+    background-color: var(--aliceblue); 
     text-transform: uppercase;
-    text-shadow: #FFCB05 2px -1px 2px, #FFCB05 2px -1px 2px, #FFCB05 2px -1px 2px, #FFCB05 2px -1px 2px; /* Corrigido: mantive a cor original, ajustar se necessário */
-    border-radius: 1.5rem;
+    text-shadow: #FFCB05 2px -1px 2px, #FFCB05 2px -1px 2px, #FFCB05 2px -1px 2px, #FFCB05 2px -1px 2px; 
+    border-radius: 2px;
 }
 
 .btn-level:hover {
-    background-color: var(--darkblue); /* Corrigido: mantive a cor original, ajustar se necessário */
-    color: var(--aliceblue); /* Corrigido: mantive a cor original, ajustar se necessário */
+    background-color: var(--darkblue); 
+    color: var(--aliceblue); 
     text-shadow: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transform: scale(1.1);
@@ -256,7 +256,7 @@ header {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: var(--aliceblue); /* Corrigido: alterei a cor para aliceblue */
+    background-color: var(--aliceblue); 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1);
     max-height: calc(100vh - 260px);
 }
@@ -265,7 +265,7 @@ header {
     font-family: var(--content-text);
     font-size: 14pt;
     text-align: center;
-    color: var(--darkblue); /* Corrigido: mantive a cor original, ajustar se necessário */
+    color: var(--darkblue); 
 }
 
 /* Game page */
@@ -275,7 +275,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.5);
-    color: var(--darkblue); /* Corrigido: mantive a cor original, ajustar se necessário */
+    color: var(--darkblue); 
     width: 100%;
     max-width: 700px;
     padding: 1rem;
