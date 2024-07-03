@@ -73,7 +73,7 @@ The live link can be found here - [Beyonce Card](https://matt-rodrigues.github.i
 - CSS: No errors were found when passing through the official Jigsaw validator.
    * [style.css](documents/test/test-css.png)
 
-- JavaScript: No errors were found when passing through the official Esprima: Syntax Validator.
+- JavaScript: No errors were found when passing through the official JSHint Validator.
     *[Game Page](documents/test/test-game-js.png)
     *[Script Page](documents/test/test-script-js.png)
 
