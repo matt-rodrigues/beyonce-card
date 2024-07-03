@@ -7,7 +7,7 @@ input.addEventListener('input', validateInput);
 form.addEventListener('submit', handleSubmit);
 
 function validateInput({ target }) {
-    if (target.value.length < 2 || target.value.trim() == "") {
+    if (target.value.length < 2 || target.value.trim() === "") {
         button.setAttribute('disabled', '');
     } else {
         button.removeAttribute('disabled');
@@ -16,7 +16,6 @@ function validateInput({ target }) {
 
 function handleSubmit(event) {
     event.preventDefault();
-
     localStorage.setItem('player', input.value);
 }
 
@@ -61,7 +60,7 @@ btnHard.addEventListener('click', () => {
     const columns = isSmallDevice ? 5 : 8;
     const rows = isSmallDevice ? 6 : 4;
     redirectToGamePage(columns, rows);
-})
+});
 
 //add img to buttons
 function addImagesToButtons(button, n) {
